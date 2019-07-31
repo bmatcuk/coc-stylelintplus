@@ -1,3 +1,5 @@
+[![Release](https://img.shields.io/npm/v/coc-stylelintplus.svg)](https://www.npmjs.com/package/coc-stylelintplus)
+
 # coc-stylelintplus
 coc-stylelintplus is an extension for [coc.nvim] that supports additional
 features that coc-stylelint is missing. For example:

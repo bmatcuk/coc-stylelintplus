@@ -3605,15 +3605,16 @@ style-search@^0.1.0:
   resolved "https://registry.yarnpkg.com/style-search/-/style-search-0.1.0.tgz#7958c793e47e32e07d2b5cafe5c0bf8e12e77902"
   integrity sha1-eVjHk+R+MuB9K1yv5cC/jhLneQI=
 
-stylelint-lsp@~1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/stylelint-lsp/-/stylelint-lsp-1.0.0.tgz#dbaeba806bd661a21f22a5e29d1913fb822ddeb7"
-  integrity sha512-FtJK1CysMsk8PvTSK+Uvy7bn1SlMO8134dzLSPyH2AhInf/HzgRaoIC6tab/gom9H+/JZSn+b8L98TKyjg5b7Q==
+stylelint-lsp@~1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/stylelint-lsp/-/stylelint-lsp-1.0.1.tgz#594c08d5215e6461c19dbbe0e37836ccd637f253"
+  integrity sha512-VYOyF3PIDV/RMUPG2bCaAh7IYPU5r6avSjwyQIQoDo3/8JHPDufTqotOIUTpqoCqXP5RpUz6loYibBo03WS7jg==
   dependencies:
     fast-diff "~1.2.0"
     resolve-from "~5.0.0"
     stylelint "~10.1.0"
     vscode-languageserver "~5.2.1"
+    vscode-uri "~2.0.3"
 
 stylelint@~10.1.0:
   version "10.1.0"
@@ -4040,7 +4041,7 @@ vscode-uri@^1.0.6:
   resolved "https://registry.yarnpkg.com/vscode-uri/-/vscode-uri-1.0.8.tgz#9769aaececae4026fb6e22359cb38946580ded59"
   integrity sha512-obtSWTlbJ+a+TFRYGaUumtVwb+InIUVI0Lu0VBUAPmj2cU5JutEXg3xUE0c2J5Tcy7h2DEKVJBFi+Y9ZSFzzPQ==
 
-vscode-uri@^2.0.3:
+vscode-uri@^2.0.3, vscode-uri@~2.0.3:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/vscode-uri/-/vscode-uri-2.0.3.tgz#25e5f37f552fbee3cec7e5f80cef8469cefc6543"
   integrity sha512-4D3DI3F4uRy09WNtDGD93H9q034OHImxiIcSq664Hq1Y1AScehlP3qqZyTkX/RWxeu0MRMHGkrxYqm2qlDF/aw==
