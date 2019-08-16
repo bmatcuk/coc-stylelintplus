@@ -1,6 +1,6 @@
 {
   "name": "coc-stylelintplus",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "stylelint extension for coc.nvim supporting additional features",
   "keywords": [
     "stylelint",
@@ -133,6 +133,6 @@
   },
   "dependencies": {
     "coc.nvim": "neoclide/coc.nvim#7d2785b",
-    "stylelint-lsp": "~1.0.1"
+    "stylelint-lsp": "~1.0.2"
   }
 }
