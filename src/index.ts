@@ -11,10 +11,14 @@ import {
 export async function activate(context: ExtensionContext): Promise<void> {
   const documentSelector = [
     "css",
+    "javascript",
+    "javascriptreact",
     "less",
     "postcss",
     "scss",
     "sugarss",
+    "typescript",
+    "typescriptreact",
     "vue",
     "wxss",
   ]
