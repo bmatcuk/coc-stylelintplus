@@ -32,10 +32,14 @@
   },
   "activationEvents": [
     "onLanguage:css",
+    "onLanguage:javascript",
+    "onLanguage:javascriptreact",
     "onLanguage:less",
     "onLanguage:postcss",
     "onLanguage:scss",
     "onLanguage:sugarss",
+    "onLanguage:typescript",
+    "onLanguage:typescriptreact",
     "onLanguage:vue",
     "onLanguage:wxss"
   ],
