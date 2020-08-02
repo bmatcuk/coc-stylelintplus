@@ -1,6 +1,6 @@
 {
   "name": "coc-stylelintplus",
-  "version": "1.0.5",
+  "version": "1.1.0",
   "description": "stylelint extension for coc.nvim supporting additional features",
   "keywords": [
     "stylelint",
