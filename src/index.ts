@@ -8,20 +8,33 @@ import {
   workspace,
 } from "coc.nvim"
 
+interface Config {
+  filetypes?: string[]
+  cssInJs?: boolean
+}
+
+const DEFAULT_FILETYPES = [
+  "css",
+  "less",
+  "postcss",
+  "scss",
+  "sugarss",
+  "vue",
+  "wxss",
+]
+
 export async function activate(context: ExtensionContext): Promise<void> {
-  const documentSelector = [
-    "css",
-    "javascript",
-    "javascriptreact",
-    "less",
-    "postcss",
-    "scss",
-    "sugarss",
-    "typescript",
-    "typescriptreact",
-    "vue",
-    "wxss",
-  ]
+  const config = workspace.getConfiguration().get<Config>("stylelintplus", {})
+  let documentSelector = config.filetypes || DEFAULT_FILETYPES
+  if (config.cssInJs) {
+    documentSelector = [
+      ...documentSelector,
+      "javascript",
+      "javascriptreact",
+      "typescript",
+      "typescriptreact",
+    ]
+  }
 
   const serverOptions: ServerOptions = {
     args: ["--node-ipc"],

@@ -1,6 +1,6 @@
 {
   "name": "coc-stylelintplus",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "stylelint extension for coc.nvim supporting additional features",
   "keywords": [
     "stylelint",
@@ -31,17 +31,7 @@
     "coc": "^0.0.15"
   },
   "activationEvents": [
-    "onLanguage:css",
-    "onLanguage:javascript",
-    "onLanguage:javascriptreact",
-    "onLanguage:less",
-    "onLanguage:postcss",
-    "onLanguage:scss",
-    "onLanguage:sugarss",
-    "onLanguage:typescript",
-    "onLanguage:typescriptreact",
-    "onLanguage:vue",
-    "onLanguage:wxss"
+    "*"
   ],
   "contributes": {
     "configuration": {
@@ -78,11 +68,34 @@
           "type": "object",
           "default": null
         },
+        "stylelintplus.cssInJs": {
+          "description": "Run stylelint on javascript/typescript files.",
+          "scope": "window",
+          "type": "boolean",
+          "default": false
+        },
         "stylelintplus.enable": {
           "description": "If false, stylelint will not validate the file.",
           "scope": "resource",
           "type": "boolean",
           "default": true
+        },
+        "stylelintplus.filetypes": {
+          "description": "Filetypes that coc-stylelintplus will lint.",
+          "scope": "window",
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [
+            "css",
+            "less",
+            "postcss",
+            "scss",
+            "sugarss",
+            "vue",
+            "wxss"
+          ]
         },
         "stylelintplus.trace.server": {
           "description": "Capture trace messages from the server.",
@@ -120,9 +133,9 @@
   },
   "devDependencies": {
     "@types/node": "~14.0.26",
-    "@typescript-eslint/eslint-plugin": "~3.7.0",
-    "@typescript-eslint/parser": "~3.7.0",
-    "eslint": "~7.5.0",
+    "@typescript-eslint/eslint-plugin": "~3.8.0",
+    "@typescript-eslint/parser": "~3.8.0",
+    "eslint": "~7.6.0",
     "eslint-config-prettier": "~6.11.0",
     "eslint-plugin-prettier": "~3.1.0",
     "eslint_d": "~9.1.1",

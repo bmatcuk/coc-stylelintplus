@@ -53,8 +53,12 @@ it makes sense to use it together with coc-stylelintplus.
   file.
 * **stylelintplus.configOverrides** (default `null`) - stylelint config
   overrides.
+* **stylelintplus.cssInJs** (default `false`) - Run stylelint on
+  javascript/typescript files.
 * **stylelintplus.enable** (default `true`) - if false, disable linting and
   auto-formatting.
+* **stylelintplus.filetypes** (default see below) - Filetypes that
+  coc-stylelintplus will lint.
 * **stylelintplus.validateOnSave** (default `false`) - lint on save.
 * **stylelintplus.validateOnType** (default `true`) - lint after changes.
 
@@ -70,6 +74,11 @@ explicitly turn on **validateOnSave** if you are using another editor extension
 that will make changes to the file on save, otherwise, diagnostic messages from
 stylelint may be out-of-date after a save (ie, may point to the wrong line or
 may have been fixed by the automatic changes on save, etc).
+
+Default filetypes handled by coc-stylelintplus are css, less, postcss, scss,
+sugarss, vue, and wxss. This list can be overridden with the `filetypes`
+option. If you enable the `cssInJs` option, javascript, javascriptreact,
+typescript, and typescriptreact will be added to the list.
 
 [coc-css]: https://github.com/neoclide/coc-css
 [coc.nvim]: https://github.com/neoclide/coc.nvim
