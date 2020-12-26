@@ -2,6 +2,7 @@
   "extends": "./tsconfig.json",
   "exclude": ["test/**/*"],
   "compilerOptions": {
-    "declaration": true
+    "declaration": true,
+    "skipLibCheck": true
   }
 }
