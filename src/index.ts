@@ -4,9 +4,15 @@ import {
   LanguageClientOptions,
   ServerOptions,
   TransportKind,
+  commands,
   services,
+  window as Window,
   workspace,
 } from "coc.nvim"
+import {
+  ExecuteCommandParams,
+  VersionedTextDocumentIdentifier,
+} from "vscode-languageserver-protocol"
 
 interface Config {
   filetypes?: string[]
@@ -71,4 +77,28 @@ export async function activate(context: ExtensionContext): Promise<void> {
 
   const { subscriptions } = context
   subscriptions.push(services.registLanguageClient(client))
+  subscriptions.push(
+    commands.registerCommand("stylelintplus.applyAutoFixes", async () => {
+      const doc = await workspace.document
+      if (!doc) {
+        return
+      }
+
+      const textDocument: VersionedTextDocumentIdentifier = {
+        uri: doc.uri,
+        version: doc.version,
+      }
+      const params: ExecuteCommandParams = {
+        command: "stylelint.applyAutoFixes",
+        arguments: [textDocument],
+      }
+
+      await client.sendRequest("workspace/executeCommand", params).catch(() => {
+        Window.showErrorMessage(
+          "Failed to apply stylelint fixes to document.",
+          "error"
+        )
+      })
+    })
+  )
 }
