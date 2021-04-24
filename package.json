@@ -1,6 +1,6 @@
 {
   "name": "coc-stylelintplus",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "stylelint extension for coc.nvim supporting additional features",
   "keywords": [
     "stylelint",
@@ -149,7 +149,7 @@
     "vscode-languageserver-protocol": "~3.16.0"
   },
   "dependencies": {
-    "stylelint-lsp": "~1.0.6",
+    "stylelint-lsp": "~1.2.1",
     "tslib": "^2.0.3"
   }
 }
