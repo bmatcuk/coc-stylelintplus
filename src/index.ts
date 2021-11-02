@@ -23,6 +23,7 @@ const DEFAULT_FILETYPES = [
   "css",
   "less",
   "postcss",
+  "sass",
   "scss",
   "sugarss",
   "vue",
