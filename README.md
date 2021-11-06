@@ -75,8 +75,8 @@ that will make changes to the file on save, otherwise, diagnostic messages from
 stylelint may be out-of-date after a save (ie, may point to the wrong line or
 may have been fixed by the automatic changes on save, etc).
 
-Default filetypes handled by coc-stylelintplus are css, less, postcss, scss,
-sugarss, vue, and wxss. This list can be overridden with the `filetypes`
+Default filetypes handled by coc-stylelintplus are css, less, postcss, sass,
+scss, sugarss, vue, and wxss. This list can be overridden with the `filetypes`
 option. If you enable the `cssInJs` option, javascript, javascriptreact,
 typescript, and typescriptreact will be added to the list.
 

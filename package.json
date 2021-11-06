@@ -1,6 +1,6 @@
 {
   "name": "coc-stylelintplus",
-  "version": "1.4.1",
+  "version": "1.5.0",
   "description": "stylelint extension for coc.nvim supporting additional features",
   "keywords": [
     "stylelint",
@@ -91,6 +91,7 @@
             "css",
             "less",
             "postcss",
+            "sass",
             "scss",
             "sugarss",
             "vue",
